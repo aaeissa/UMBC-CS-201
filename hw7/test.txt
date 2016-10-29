@@ -1,6 +1,0 @@
-This is a test document. This is a sentence, using commas. And this isn’t what you’d think it is, because it has contractions as well as commas-and-this-is-still-one-word. This is a new line with hidden characters, yo. 
-
-This is another new line. 
-
-
-And this. 
