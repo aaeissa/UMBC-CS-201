@@ -8,8 +8,6 @@
 #present in the wordsearch, and if so, where the begin and in what direction they
 #are spelled
 
-
-
 #Function name: wordSearch
 #Description: recursively searches in 8 different directions 
 #Inputs: direction, i, rows, j, columns, puzzleList, word, wordIndex
