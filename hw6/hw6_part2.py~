@@ -1,0 +1,46 @@
+
+def main():
+
+	primeList = []
+	maxNum = 500
+
+	for i in range(2, maxNum+1):
+		primeList.append(i)
+		
+	counter = 2
+	while counter < 26:
+
+		for i in primeList:
+			if i % counter == 0 and i != counter:
+				primeList.remove(i)
+		counter += 1
+
+	
+
+	myString = ""
+	
+	for i in primeList:
+		myString += str(i) + " "
+
+	print(myString)
+	
+
+
+
+main()
+
+
+# maxNum = 500
+
+#	for i in range(2, maxNum+1):
+#
+#		if i==2 or i==3:
+#			primeList.append(i)
+#		
+#		elif (i%2 != 0) and (i%3 != 0) and (i%5 != 0):
+#			primeList.append(i)
+#
+#	for i in range(26, maxNum+1):
+#		if i 
+#
+#	print(primeList)

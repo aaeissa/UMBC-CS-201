@@ -1,0 +1,24 @@
+#File: milesPerWeek.py
+#Author; Ahmed Eissa
+#Date: 2/18/16
+#Email: aeissa2@umbc.edu
+#Section: 11
+#Description: This program will calculate how many miles per week the user travels
+
+
+SPEED = 65
+
+def main():
+    
+       
+    oneWay = float(input("How many miles is the trip one way? "))
+    days = int(input("How many days a week do you go to work? "))
+
+    milesPerWeek = oneWay * 2 * days 
+    hoursPerWeek = milesPerWeek / SPEED
+
+    print("In a typical week, you drive", milesPerWeek, "miles.")
+    print("In a typical week, you spend", hoursPerWeek, "hours in the car.") 
+      
+
+main()

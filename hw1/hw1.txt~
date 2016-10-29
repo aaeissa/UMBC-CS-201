@@ -1,0 +1,52 @@
+Author: Ahmed Eissa
+Date: 2/8/16
+Email: aeissa2@umbc.edu
+Section: CMSC201-1629 Section 7
+Description: This assignment will contain four algorithms written in text format 
+
+
+Question 1: Prime Number
+
+1) Obtain a positive integer from the user
+2) Initialize a varibale called "N" to 0
+3) Set the positive integer obtained from the user equal to "N"
+4) If "N" = 2 or "N" = 3, "N" is a prime number
+5) Divide "N" by 2, and if the remainder is 0, the number is not prime. 
+6) If the remiander does not equal 0, continue to divide "N" by every number until (N-1). 
+7) If you obtain a remainder of 0 at any point, the number is not prime. 
+8) If you do not receive a remainder of 0 up until (N-1), the number is prime.   
+
+
+Question 2: Palindrome
+
+1) Obtain a word from user
+2) Initialize variables "first" and "last"
+3) Set the first letter of the word equal to "first" and the last letter of the word equal to "last"
+4) If "first" does not equal "last", the word is not a palindrome
+5) Set the next leftmost letter equal to "first" and the next rightmost letter equal to "last"
+6) If "first" does not equal "last", the word is not a palindrome
+7) Repeat steps 5 and 6 until all letters in the word have been compared
+8) If all comparisons of "first" and "last" have equaled each other, the word is a palindrome. 
+
+
+Question 3: Notecards
+
+1) Obtain one notecard from the pile
+2) Initialize a variable called "value"
+3) Add the number from the first notecard to the variable "value"
+4) Take another card from the pile
+5) If the number on the notecard is less than the variable "value", replace "value" with the lesser number on the new notecard
+6) Repeat steps 4 and 5 until all 1000 notecards have been picked
+7) Display the variable "value"
+
+
+Question 4: Compute Factorial
+1) Obtain the positive number from the user
+2) Initialize a variable called "N" to 0
+3) Set the positive number obtained from the user equal to "N"
+4) Multiply "N" by the difference of (N-1)
+5) Initialize a variable called "Factorial" to 0
+6) Add the product of N * (N-1) to "Factorial"
+7) Set the value of (N-1) to "N" 
+8) Repeat steps 4 through 7 until "N" = 1
+9) Display value of varibale "Factorial" 

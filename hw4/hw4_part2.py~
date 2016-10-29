@@ -1,0 +1,29 @@
+
+
+def main():
+
+ #    userSentence = input("Please enter a sentence: ")
+ #   length = len(userSentence)
+    
+  #  print("Original sentence:\n%s" % (userSentence))
+   # print("Every third letter:")
+
+
+    #for letter in userSentence[0:length - 1]:
+     #   print("%s" % (userSentence[letter]))
+
+     userSentence = input("Please enter a sentence: ")
+     sentenceList = list(userSentence) 
+
+     print("Original sentence:\n%s" % (userSentence))
+     print("Every third letter:")
+
+     
+     for i in range(len(sentenceList)):
+         if (i % 3) == 0:
+             print(sentenceList[i], end = "")
+
+     print("\n")
+
+
+main()

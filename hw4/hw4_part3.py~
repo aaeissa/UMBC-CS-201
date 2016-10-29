@@ -1,0 +1,21 @@
+
+
+def main():
+
+    numPledges = int(input("How many pledges did you get? "))
+
+    totalDonations = 0    
+    for i in range (1, numPledges+1): 
+        donation = float(input("What is the value of donation %d? " % (i)))
+        totalDonations += donation
+
+    numPlunges = int(input("How many plunges did you do? "))
+
+    finalDonations = 0
+    for j in range (1, numPlunges+1):
+        finalDonations += totalDonations
+
+    print("Based on your", numPlunges, "plunges you earned $%f for the charity." % (finalDonations))
+
+
+main()

@@ -1,0 +1,14 @@
+#Author
+
+
+price = float(input("What is the price of the book? ")) 
+amount = int(input("How many copies of this book would you like? "))
+order = price * amount 
+
+tax = .065 * order
+shipping = 1.95 * amount
+
+total = tax + shipping + order
+
+
+print("The total cost of your order is: ", total)

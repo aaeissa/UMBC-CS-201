@@ -1,0 +1,14 @@
+
+
+
+def main():
+
+    userSentence = input("Please enter a word: ")
+    
+    if (userSentence = "please") or (userSentence = "thank you") or (userSentence = "excuse me"):
+        print("Your manners are impeccable.")
+    else:
+        print("How rude!")
+
+
+main()

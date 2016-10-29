@@ -1,0 +1,42 @@
+
+
+def main():
+
+    shows = ["Daredevil", "Fargo", "Limitless", "Elementary", "Brooklyn 99", "Empire", "Supergirl"]
+    
+    for i in range(len(shows)):
+        print(i+1, "-", shows[i])
+       
+
+    
+    print("You and your friends are voting on a show to watch.\nWhich show would you like to vote for?")
+
+    voteList = [0] * len(shows)
+    vote = int(input("Enter '0' to stop voting: "))
+
+
+    dd = 0
+    fargo = 0
+
+    while vote != 0:
+        if (vote >= 1) and (vote <= 7):
+            if vote == 1:
+                dd += 1
+                voteList[0] = dd
+            if vote == 2:
+                fargo += 1
+                voteList[1] = fargo
+        vote = int(input("Enter '0' to stop voting: "))
+      
+    
+    print("Here are the final votes:\n")
+
+  
+    for i in range(len(shows)):
+        print(shows[i], "has\t", voteList[i], "votes")
+
+
+main()
+
+
+

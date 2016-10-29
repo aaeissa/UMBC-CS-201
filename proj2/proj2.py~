@@ -1,0 +1,106 @@
+
+def wordSearch(puzzleList, word, wordIndex, pos):
+
+	currentLetter = word[wordIndex] #this is initially passed in as 0
+	wordLength = len(word)
+
+	if wordLength == wordIndex+1:
+		return True 
+
+
+	rows = len(puzzleList) #12 in this example 
+	columns = len(puzzleList[0]) #12 in this example
+
+	for i in range(rows):
+		for j in range(columns):
+			if puzzleList[i][j] == currentLetter:
+				
+                                if pos == 1:
+                                        if i-1 >= 0 and i-1 <= rows-1 and j-1 >= 0 and j-1 <= columns-1: #NE
+                                                if puzzleList[i-1][j-1] == word[wordIndex+1]:
+                                                        wordSearch(puzzleList, word, wordIndex+1, pos)
+                                if pos == 2: 
+                                        if i-1 >= 0 and i-1 <= rows-1 and j >= 0 and j <= columns-1: #N
+                                                if puzzleList[i-1][j] == word[wordIndex+1]:
+                                                        wordSearch(puzzleList, word, wordIndex+1, pos)
+                                
+                                if pos == 3:
+                                        if i-1 >= 0 and i-1 <= rows-1 and j+1 >= 0 and j+1 <= columns-1: #NW 
+                                                if puzzleList[i-1][j+1] == word[wordIndex+1]:
+                                                        wordSearch(puzzleList, word, wordIndex+1, pos)
+
+                                if pos == 4:
+                                        if i >= 0 and i <= rows-1 and j-1 >= 0 and j-1 <= columns-1:  #W
+                                                if puzzleList[i][j-1] == word[wordIndex+1]:
+                                                        wordSearch(puzzleList, word, wordIndex+1, pos)
+		
+                                if pos == 5:
+                                        if i >= 0 and i <= rows-1 and j+1 >= 0 and j+1 <= columns-1: #E
+                                                if puzzleList[i][j+1] == word[wordIndex+1]:
+                                                        wordSearch(puzzleList, word, wordIndex+1, pos)
+
+                                if pos == 6:
+                                        if i+1 >= 0 and i+1 <= rows-1 and j-1 >= 0 and j-1 <= columns-1: #SW 
+                                                if puzzleList[i+1][j-1] == word[wordIndex+1]:
+                                                        wordSearch(puzzleList, word, wordIndex+1, pos)
+
+                                if pos == 7:
+                                        if i+1 >= 0 and i+1 <= rows-1 and j >= 0 and j <= columns-1: #S
+                                                if puzzleList[i+1][j] == word[wordIndex+1]:
+                                                        wordSearch(puzzleList, word, wordIndex+1, pos)
+
+                                if pos == 8:
+                                        if i+1 >= 0 and i+1 <= rows-1 and j+1 >= 0 and j+1 <= columns-1: #SE 
+                                                if puzzleList[i+1][j+1] == word[wordIndex+1]:
+                                                        wordSearch(puzzleList, word, wordIndex+1, pos)
+
+	return ()
+
+def main():
+
+	print("Welcome to the Word Search.")
+	print("For this, you will import two files: 1. The puzzle board, and 2. The word list.")
+
+	puzzleFile = input("What is the puzzle file you would like to import? ")
+	wordList = input("What is the word list file you would like to import? ")
+
+	puzzleList = [] #this will be the 2d list of the game board/word search
+	newList = [] #temporary list to create 2d list
+	puzzle = open(puzzleFile, "r")
+	puzzle = puzzle.readlines()
+
+	for line in puzzle:
+		stripped = line.strip()
+
+		for char in stripped:
+			if char != " ":
+				newList.append(char)
+
+		puzzleList.append(newList)
+		newList = [] #emptying the list, rinse and repeat
+
+	puzzleLen = len(puzzleList) #length of the puzzle, total number of rows
+
+	words = open(wordList, "r")
+	words = words.readlines()
+
+	keyList = [] #key words from the .txt file 
+	for line in words:
+		strippedKeys = line.strip()
+		keyList.append(strippedKeys)
+
+        wordIndex = 0
+	myBool = False
+
+	for word in keyList:
+		myBool = wordSearch(puzzleList, word, wordIndex, 1)
+		myBool = wordSearch(puzzleList, word, wordIndex, 2)
+		myBool = wordSearch(puzzleList, word, wordIndex, 3)
+		myBool = wordSearch(puzzleList, word, wordIndex, 4)
+		myBool = wordSearch(puzzleList, word, wordIndex, 5)
+		myBool = wordSearch(puzzleList, word, wordIndex, 6)
+		myBool = wordSearch(puzzleList, word, wordIndex, 7)
+		myBool = wordSearch(puzzleList, word, wordIndex, 8)
+
+main()  
+

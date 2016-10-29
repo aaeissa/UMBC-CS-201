@@ -1,0 +1,66 @@
+
+BUX_MULTIPLIER = 8
+DOLLAR_MULTIPLIER = 0.125
+
+def convertDollarsTo(amount):    
+
+    dollars = amount * BUX_MULTIPLIER 
+    
+    dollars = format(dollars, '.2f')
+
+    return(dollars)
+
+
+def convertBuxTo(amount):
+
+    bux = amount * DOLLAR_MULTIPLIER
+
+    bux = format(bux, '.2f')
+
+    return(bux)
+
+def goodbye():
+    
+    print("Goodbye, and thank you for using the Currency Converter.")
+
+
+def main():
+
+    print("Welcome to the Currency Converter.")
+    print("What would you like to do?")
+
+    choice = 0 
+    amount = 0
+    conversion = 0
+
+    choice = int(input("1. Convert US Dollars to Retriever Bux\n2. Convert Retriever Bux to US Dollars\n3. Exit\nEnter your choice: "))
+
+    while choice < 1 or  choice > 3:
+        choice = int(input("This is an invalid choice.\nEnter your choice: "))
+    
+    if choice == 1:
+
+        amount = float(input("How much do you want to convert?: "))
+        
+        conversion = convertDollarsTo(amount)
+
+        print(amount, "US dollars equates to", conversion, "Retriever Bux.") 
+
+        goodbye
+
+    elif choice == 2:
+
+        amount = float(input("How much do you want to convert?: "))
+
+        conversion = convertBuxTo(amount)
+
+        print(amount, "Retriever Bux equates to", conversion, "US dollars.")
+
+        goodbye
+
+    elif choice == 3:
+
+        goodbye
+
+
+main()

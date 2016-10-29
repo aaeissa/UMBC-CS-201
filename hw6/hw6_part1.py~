@@ -1,0 +1,32 @@
+
+def main():
+
+    myList = []
+    counter = 0
+   
+    while counter < 8:
+        checkCounter = 0
+
+        listNum = int(input("Please enter a number: "))
+       
+        for i in range(len(myList)):
+            if listNum == myList[i]:
+                checkCounter += 1
+
+        if checkCounter > 0:
+            print("The number", listNum, "is already in the list.")
+
+ 
+        else:
+            myList.append(listNum)
+            counter += 1
+                    
+
+    ("\n")
+    print("The contents in the list are: ")
+    for i in myList:
+        print(i)
+    
+
+main()
+

@@ -1,0 +1,64 @@
+
+
+def convertLetter(phoneNum):
+
+    upperNum = phoneNum.upper()
+    finalNum = ""
+    
+    for i in upperNum:
+        
+        if i.isdigit() == True:
+            finalNum += i
+        
+        elif i == "A" or i == "B" or i == "C":
+            
+            finalNum += "2"
+        
+        elif i == "D" or i == "E" or i == "F":
+
+            finalNum += "3"
+
+        elif i == "G" or i == "H" or i == "I":
+
+            finalNum += "4"
+
+        elif i == "J" or i == "K" or i == "L":
+
+            finalNum += "5"
+
+        elif i == "M" or i == "N" or i == "O":
+
+            finalNum += "6"
+
+        elif i == "P" or i == "Q" or i == "R" or i == "S":
+
+            finalNum += "7"
+        
+        elif i == "T" or i == "U" or i == "V":
+
+            finalNum += "8"
+
+        elif i == "W" or i == "X" or i == "Y" or i == "Z":
+
+            finalNum += "9"
+
+        elif i == "-":
+            finalNum += i
+            
+
+    return(finalNum)
+
+
+
+def main():
+
+    print("Welcome to the Telephone Converter.\n")
+    
+    phoneNum = input("Enter the phone number: ")
+
+    finalNum = convertLetter(phoneNum)
+
+    print(finalNum\n)
+    
+
+main()

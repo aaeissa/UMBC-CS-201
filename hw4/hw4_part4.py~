@@ -1,0 +1,22 @@
+
+
+
+def main():
+
+
+	print("yo")
+    userString = input("Please enter a string: ")
+
+    counter = 0
+    for i in userString:
+        if (i=='a') or (i=='e') or (i=='i') or (i=='o') or (i=='u') or (i=='y') or (i=="A") or (i=="E") or (i=="I") or (i=="O") or (i=="U") or (i=="Y"):
+            counter = counter + 1
+
+    print("There are %d vowels in the string '%s'" % (counter, userString))
+
+
+
+
+
+
+main()

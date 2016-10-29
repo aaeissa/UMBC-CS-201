@@ -1,0 +1,34 @@
+
+
+def maxInt(intList):
+
+    if len(intList) == 1:
+        return intList[0]
+    
+    elif len(intList) > 1:
+        maxVar = maxInt(intList[1:])
+
+        
+        if maxVar > intList[0]:
+            print("The max var is: ", maxVar)
+            return(maxVar)
+            
+
+        else:
+            return(intList[0])
+
+def main():
+
+    intList = []
+    
+    userInput = 0
+    
+    while userInput != -1:
+        userInput = int(input("Enter a number to append to the list, or -1 to stop: "))
+        intList.append(userInput)
+    
+    listMax = maxInt(intList)
+
+    print("The maximum value in the list is ", listMax)
+
+main()

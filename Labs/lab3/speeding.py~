@@ -1,0 +1,25 @@
+
+
+
+def main():
+
+    speedLimit = int(input("Please enter the speed limit in MPH: "))
+    userSpeed = int(input("Please enter the driving speed in MPH: "))
+    
+    if ((userSpeed-speedLimit) <= 5):
+        print("You receive no ticket...this time.")
+    elif (((userSpeed-speedLimit) > 5) and ((userSpeed-speedLimit) <= 15)):
+        print("You were over the speed limit by", userSpeed-speedLimit, "MPH")
+        print("You receive a ticket for a $100 fine.")    
+    elif (((userSpeed-speedLimit) > 15) and ((userSpeed-speedLimit) < 30)):
+        print("You were over the speed limit by", userSpeed-speedLimit, "MPH")
+        print("You receive a ticket for a $200 fine.")
+    elif (userSpeed-speedLimit) => 30:
+        print("You were over the speed limit by", userSpeed-speedLimit, "MPH")
+        print("You receive a ticket for a $500 fine, and mandatory court date.")
+
+
+
+
+
+main()

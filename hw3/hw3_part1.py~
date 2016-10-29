@@ -1,0 +1,23 @@
+# Author: Ahmed Eissa
+# File: hw3_part1.py
+# Date: 2/22/16
+# Section:     07
+# UMBC Email:  aeissa2@umbc.edu
+# Description: This program will take in a floating point number from the user and say whether the number is positive, negative, or zero.  
+
+def main():
+    
+    number1 = float(input("Please enter a floating point number: "))
+    
+    if number1 == 0.0:
+        print("The number", number1, "is equal to zero.")
+
+    if number1 > 0: 
+        print("The number", number1, "is positive.")
+
+    if number1 < 0:
+        print("The number", number1, "is negative.")
+    
+    print("\n")
+
+main()

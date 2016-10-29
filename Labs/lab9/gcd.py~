@@ -1,0 +1,23 @@
+
+
+def gcd(x, y):
+    smaller = 0
+    if x > y:
+        smaller = y
+    else: 
+        smaller = x
+    
+    gcdVar = 0
+    for i in range(1, smaller):
+        if ((x % i == 1) and (y % i == 1)):
+            gcdVar = i
+    return gcd
+
+def main():
+    print("Should print: 15\nPrints: ",end="")
+    print(gcd(30, 15))
+    print("Should print: 7\nPrints: ",end="")
+    print(gcd(7, 49))
+    print("Should print: 45\nPrints: ",end="")
+    print(gcd(45, 45))
+main()

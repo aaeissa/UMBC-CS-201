@@ -1,0 +1,32 @@
+
+
+def newChar(stripped, charList):
+    
+    #length of the word is one (or less)
+    if len(stripped) == 1:
+        charList.append(stripped[0])
+        return charList
+
+    else:
+        if stripped[0] not in charList:
+            charList.append(stripped[0])
+        newChar(stripped[1:], charList)
+        return charList
+
+
+def main():
+
+    myFile = open("input.txt", "r")
+    stripped = myFile.readlines()
+    #stripped = ""
+    charList = []
+
+    charList = newChar(stripped, charList)
+
+    print(charList)
+
+    myFile.close()
+
+main()
+
+#The quick brown fox jumped over the lazy dog's tail. "For realz."
